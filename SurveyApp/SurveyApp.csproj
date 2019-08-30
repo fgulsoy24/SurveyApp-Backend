@@ -208,7 +208,12 @@
     <Content Include="Scripts\survey-app\.gitignore" />
     <Content Include="Scripts\survey-app\App.css" />
     <Content Include="Scripts\survey-app\App.test.js" />
+    <Content Include="Scripts\survey-app\app\actions\SurveyActions.js" />
     <Content Include="Scripts\survey-app\app\app.js" />
+    <Content Include="Scripts\survey-app\app\dispatcher\AppDispatcher.js" />
+    <Content Include="Scripts\survey-app\app\Utils\BaseAPI.js" />
+    <Content Include="Scripts\survey-app\app\Utils\CommonFunctions.js" />
+    <Content Include="Scripts\survey-app\app\Utils\SurveyAPI.js" />
     <Content Include="Scripts\survey-app\dist\css\AdminLTE.css" />
     <Content Include="Scripts\survey-app\dist\css\AdminLTE.min.css" />
     <Content Include="Scripts\survey-app\dist\css\alt\AdminLTE-bootstrap-social.css" />
