@@ -1,0 +1,46 @@
+[
+  {
+    "Age": 0,
+    "Gender": null,
+    "CarLicense": null,
+    "FirstCar": null,
+    "DriveTrain": null,
+    "Drifting": null,
+    "UsedBmwCount": 0,
+    "UsedBmwCarNameList": []
+  },
+  {
+    "Age": 0,
+    "Gender": null,
+    "CarLicense": null,
+    "FirstCar": null,
+    "DriveTrain": null,
+    "Drifting": null,
+    "UsedBmwCount": 0,
+    "UsedBmwCarNameList": []
+  },
+  {
+    "Age": 31,
+    "Gender": "Male",
+    "CarLicense": "Yes",
+    "FirstCar": null,
+    "DriveTrain": "FWD",
+    "Drifting": "Yes",
+    "UsedBmwCount": 1,
+    "UsedBmwCarNameList": [
+      "320"
+    ]
+  },
+  {
+    "Age": 25,
+    "Gender": "Male",
+    "CarLicense": "Yes",
+    "FirstCar": "No",
+    "DriveTrain": "RWD",
+    "Drifting": "No",
+    "UsedBmwCount": 1,
+    "UsedBmwCarNameList": [
+      "x5"
+    ]
+  }
+]

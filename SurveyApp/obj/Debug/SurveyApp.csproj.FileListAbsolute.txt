@@ -170,3 +170,10 @@ E:\Workspace\SurveyApp\SurveyApp\obj\Debug\SurveyApp.csproj.CoreCompileInputs.ca
 E:\Workspace\SurveyApp\SurveyApp\obj\Debug\SurveyApp.csproj.CopyComplete
 E:\Workspace\SurveyApp\SurveyApp\obj\Debug\SurveyApp.dll
 E:\Workspace\SurveyApp\SurveyApp\obj\Debug\SurveyApp.pdb
+E:\Workspace\SurveyApp\SurveyApp\bin\Data\SurveyResults.json
+E:\Workspace\SurveyApp\SurveyApp\bin\SimpleInjector.dll
+E:\Workspace\SurveyApp\SurveyApp\bin\SimpleInjector.Integration.Web.dll
+E:\Workspace\SurveyApp\SurveyApp\bin\SimpleInjector.Integration.Web.Mvc.dll
+E:\Workspace\SurveyApp\SurveyApp\bin\SimpleInjector.xml
+E:\Workspace\SurveyApp\SurveyApp\bin\SimpleInjector.Integration.Web.xml
+E:\Workspace\SurveyApp\SurveyApp\bin\SimpleInjector.Integration.Web.Mvc.xml
