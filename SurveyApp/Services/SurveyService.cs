@@ -87,22 +87,80 @@ namespace SurveyApp.Services
                 series = new int[2] { targetableClients, nonTargetableClients },
                 labels = new string[2] { "Targetable Clients", "Non Targetable Clients" }
             };
-            var allListCount = allResults.Count(x => x.FirstCar != "Yes" && x.Age > 18 && x.CarLicense == "Yes");
+            var allTargetableListCount = allResults.Count(x => x.FirstCar != "Yes" && x.Age > 18 && x.CarLicense == "Yes");
             int usedBmwListCount = 0;
             foreach (var result in allResults)
             {
                 usedBmwListCount =  usedBmwListCount + result.UsedBmwCarNameList.Count();
             }
+            
+            var avgUsedBmw = Math.Round(Convert.ToDecimal((decimal)usedBmwListCount / (decimal)allTargetableListCount),1);
 
-            var avgUsedBmw = Convert.ToInt32(allListCount / usedBmwListCount);
 
-            List<dynamic> resultsList = new List<dynamic>();
-            resultsList.Add(ageResults);
-            resultsList.Add(carLicenseResults);
-            resultsList.Add(firstCarResults);
-            resultsList.Add(targetableResults);
-            resultsList.Add(avgUsedBmw);
+            var driveTrainAnswers = allResults.Count(x => x.FirstCar != "Yes" && x.Age > 18 && x.CarLicense == "Yes" && (x.DriveTrain == "FWD" || x.DriveTrain == "I don’t know"));
+            var driftingAnswers = allResults.Count(x => x.FirstCar != "Yes" && x.Age > 18 && x.CarLicense == "Yes" && x.Drifting == "Yes");
+            var percentageDriveTrain = Math.Round(Convert.ToDecimal((decimal)driveTrainAnswers / (decimal)allTargetableListCount) * 100,1);
+            var percentageDrifting = Math.Round(Convert.ToDecimal((decimal)driftingAnswers / (decimal)allTargetableListCount) * 100,1);
+
+            var modelDistributionList = CalculateModelDistribution(allResults);
+
+
+            var modelDistribution = new
+            {
+                series = modelDistributionList.Select(x => x.Count),
+                labels = modelDistributionList.Select(x => x.ModelName)
+            };
+
+            List<dynamic> resultsList = new List<dynamic>
+            {
+                ageResults,
+                carLicenseResults,
+                firstCarResults,
+                targetableResults,
+                avgUsedBmw,
+                percentageDriveTrain,
+                percentageDrifting,
+                modelDistribution
+            };
+
             return resultsList;
+        }
+
+        private List<DistrubitionModel> CalculateModelDistribution(List<SurveyResults> results)
+        {
+            List<DistrubitionModel> modelDist = new List<DistrubitionModel>();
+            foreach (var result in results)
+            {
+                foreach (var name in result.UsedBmwCarNameList)
+                {
+
+                    if (modelDist.Count(x => x.ModelName == name) > 0)
+                    {
+                        foreach (var u in modelDist.Where(u => u.ModelName == name))
+                        {
+                            u.Count = u.Count + 1;
+                        }
+                    }
+                    else
+                    {
+                        modelDist.Add(new DistrubitionModel(1, name));
+                    }
+
+                }
+            }
+            return modelDist;
+        }
+
+        public class DistrubitionModel
+        {
+
+            public DistrubitionModel(int item1, string item2)
+            {
+                Count = item1;
+                ModelName = item2;
+            }
+            public int Count { get; set; }
+            public string ModelName { get; set; }
         }
     }
 }

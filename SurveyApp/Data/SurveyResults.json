@@ -54,5 +54,64 @@
     "UsedBmwCarNameList": [
       "320d"
     ]
+  },
+  {
+    "Age": 25,
+    "Gender": "Male",
+    "CarLicense": "Yes",
+    "FirstCar": "Yes",
+    "DriveTrain": null,
+    "Drifting": null,
+    "UsedBmwCount": 0,
+    "UsedBmwCarNameList": []
+  },
+  {
+    "Age": 26,
+    "Gender": "Male",
+    "CarLicense": "Yes",
+    "FirstCar": null,
+    "DriveTrain": "RWD",
+    "Drifting": "No",
+    "UsedBmwCount": 3,
+    "UsedBmwCarNameList": [
+      "320",
+      "x3",
+      "m300"
+    ]
+  },
+  {
+    "Age": 17,
+    "Gender": null,
+    "CarLicense": null,
+    "FirstCar": null,
+    "DriveTrain": null,
+    "Drifting": null,
+    "UsedBmwCount": 0,
+    "UsedBmwCarNameList": []
+  },
+  {
+    "Age": 21,
+    "Gender": "Male",
+    "CarLicense": "Yes",
+    "FirstCar": "Yes",
+    "DriveTrain": null,
+    "Drifting": null,
+    "UsedBmwCount": 0,
+    "UsedBmwCarNameList": []
+  },
+  {
+    "Age": 26,
+    "Gender": "Male",
+    "CarLicense": "Yes",
+    "FirstCar": null,
+    "DriveTrain": "FWD",
+    "Drifting": "No",
+    "UsedBmwCount": 4,
+    "UsedBmwCarNameList": [
+      "320d",
+      "318i",
+      "110i",
+      "m320"
+    ]
   }
 ]
